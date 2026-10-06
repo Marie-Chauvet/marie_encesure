@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Meie+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    background-color: #FFFCED;
+    color: #1D0873;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    background-color: #1D0873;
+    color: #FFFCED;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Manrope', serif;
+
+    margin: 0 0 1.5rem;
+
+    font-size: clamp(4rem, 3vw, 1.25rem);
+    color: #FACC15;
+}
+
+
+/* =========================================================
+   TITRE PAGE D'ACCUEIL
+   ========================================================= */
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titre_marie {
+    font-family: 'Parisienne', cursive;
+    font-style: italic;
+    font-weight: 400;
+
+    /* S'adapte à la largeur de l'écran */
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+
+    color: #FEF08A;
+    margin-top: -0.5rem;
+}
+
+.titre_cesure {
+    font-family: 'Anton', sans-serif;
+
+    /* Entre environ 3rem sur téléphone et 5.5rem sur ordinateur */
+    font-size: clamp(3rem, 11vw, 5.5rem);
+
+    color: #FACC15;
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: 0.06rem;
+}
+
+.sous_titre {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+
+    color: #FACC15;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.06rem;
+
+    margin-top: 3rem;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Permet à la navigation de passer sur plusieurs lignes */
+    flex-wrap: wrap;
+
+    gap: 1rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+nav a {
+    color: #FFFCED;
+    text-decoration: none;
+    font-weight: bold;
+
+    font-size: clamp(0.9rem, 2vw, 1rem);
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #79D1F2;
+}
+
+nav a.active {
+    color: #79D1F2;
+}
+
+
+/* =========================================================
+   CONTENU PRINCIPAL
+   ========================================================= */
+
+main {
+    width: min(100% - 2.5rem, 56rem);
+    margin: 0 auto;
+
+    /* espace vertical + horizontal */
+    padding: 2.5rem 0;
+}
+
+
+/* =========================================================
+   SECTION CÉSURE
+   ========================================================= */
+
+.cesure {
+    margin-top: 2rem;
+}
+
+.cesure h2 {
+    font-family: 'Fraunces', serif;
+    text-align: center;
+
+    margin: 0 0 2rem;
+
+    font-size: clamp(2rem, 5vw, 2.5rem);
+
+    color: #1D0873;
+}
+
+.cesure h3 {
+    font-family: 'Manrope', serif;
+
+    margin: 0 0 1.5rem;
+
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
+
+    color: #FACC15;
+}
+
+
+/* =========================================================
+   CARTES
+   ========================================================= */
+
+.cartes {
+    display: flex;
+
+    /* Les cartes prennent automatiquement la place disponible */
+    gap: clamp(1rem, 3vw, 1.875rem);
+}
+
+.carte {
+    flex: 1;
+
+    /* Padding qui s'adapte légèrement */
+    padding: clamp(1.5rem, 4vw, 2.2rem);
+
+    background-color: #1D0873;
+    border-radius: 0.9rem;
+
+    text-decoration: none;
+    color: #FFFCED;
+
+    box-shadow: 0 0.25rem 0.95rem rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.carte:hover {
+    transform: translateY(-0.3rem);
+
+    box-shadow:
+        0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.carte p,
+.carte span {
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    line-height: 1.5;
+}
+
+.carte img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    margin: 2rem auto 0;
+}
+
+
+/* =========================================================
+   ARTICLES
+   ========================================================= */
+
+article {
+    background-color: white;
+
+    padding: clamp(1.25rem, 4vw, 1.875rem);
+
+    margin-bottom: 1.875rem;
+
+    border-radius: 0.9rem;
+
+    box-shadow:
+        0 0.25rem 0.95rem rgba(0, 0, 0, 0.08);
+}
+
+article h2 {
+    margin-top: 0;
+
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+}
+
+article p {
+    line-height: 1.7;
+    color: #000000;
+    text-align: justify;
+
+    font-size: clamp(1rem, 2vw, 1.05rem);
+}
+
+
+/* =========================================================
+   LIENS DANS LES ARTICLES
+   ========================================================= */
+
+article a {
+    color: #1D0873;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #79D1F2;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 1rem 1.25rem 2rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLETTES / PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    main {
+        width: min(100% - 2rem, 56rem);
+        padding-top: 2rem;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    nav {
+        gap: 0.75rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .cartes {
+        flex-direction: column;
+    }
+
+    .carte {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    main {
+        width: min(100% - 1.5rem, 56rem);
+        padding-top: 1.5rem;
+    }
+
+    header {
+        padding: 1.5rem 0.75rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.7rem;
+
+        margin-bottom: 1.5rem;
+    }
+
+    .titre_marie {
+        font-size: clamp(2.3rem, 14vw, 3rem);
+    }
+
+    .titre_cesure {
+        font-size: clamp(3rem, 18vw, 4.5rem);
+    }
+
+    .sous_titre {
+        font-size: 0.8rem;
+    }
+
+    article {
+        padding: 1.25rem;
+    }
+
+    article p {
+        text-align: left;
+    }
+
+}
